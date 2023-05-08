@@ -11,6 +11,9 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Transport Hub</title>
 </head>
 <body>
@@ -19,12 +22,20 @@
         <img th:src="@{/images/logo.png}">
         <h1>TRANSPORT HUB</h1>
         <nav>
-            <a href="/"><p>ACASĂ</p></a>
-            <a href="/destinations/list"><p>DESTINAȚII</p></a>
-            <a href="/passengers/list"><p>PASAGERI</p></a>
-            <a href="/routes/list"><p>TRASEE</p></a>
-            <a href="/races/list"><p>CURSE</p></a>
-            <a href="/timetables/list" class="active-page"><p>Orar</p></a>
+            <div class="dropdown show">
+                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div><img th:src="@{/images/menu.png}"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right text-white w-100" aria-labelledby="dropdownMenuLink" style="background-color: #212121 !important; margin-top: 59px !important; margin-right: -60px !important;">
+                    <a class="dropdown-item" href="/"><p>ACASĂ</p></a>
+                    <a class="dropdown-item" href="/destinations/list"><p>DESTINAȚII</p></a>
+                    <a class="dropdown-item" href="/passengers/list"><p>PASAGERI</p></a>
+                    <a class="dropdown-item" href="/routes/list"><p>TRASEE</p></a>
+                    <a class="dropdown-item" href="/races/list"><p>CURSE</p></a>
+                    <a class="dropdown-item" href="/timetables/list"><p>ORAR</p></a>
+                    <a class="dropdown-item" href="/reservations/list"><p>REZERVARI</p></a>
+                </div>
+            </div>
         </nav>
     </header>
 

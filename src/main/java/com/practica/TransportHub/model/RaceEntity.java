@@ -1,6 +1,7 @@
 package com.practica.TransportHub.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,21 +14,27 @@ public class RaceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
+    @NotBlank(message = "Name is mandatory")
     private String name;
     @ManyToOne
-    @NotNull
+    @NotNull(message = "Destination is mandatory")
     private DestinationEntity destination;
     @ManyToOne
-    @NotNull
+    @NotNull(message = "Route is mandatory")
     private RouteEntity route;
-    @Column(nullable = false)
+    @NotBlank(message = "Bus is mandatory")
     private String bus;
-    @Column(nullable = false)
+    @NotBlank(message = "Registration number is mandatory")
     private String registrationNumber;
-    @Column(nullable = false)
+    @NotNull(message = "Number of seats is mandatory")
     private int numberOfSeats;
 
-    @Column(nullable = false)
+    @NotNull(message = "Price is mandatory")
     private double price;
+
+    @Override
+    public String toString() {
+        return String.valueOf(id);
+    }
 }

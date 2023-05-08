@@ -31,4 +31,9 @@ public class PassengerEntity {
     @Length(min = 9, max = 9, message = "Phone number must have 9 characters")
     @Digits(message = "Must be a well-formed phone number", integer = 9, fraction = 0)
     private String phoneNumber;
+
+    @Override
+    public String toString() {
+        return String.valueOf(id);
+    }
 }

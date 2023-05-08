@@ -29,4 +29,9 @@ public class TimetableEntity {
     @Min(value = 1, message = "Platform min number is 1")
     @Max(value = 100, message = "Platform max number is 100")
     private int platform;
+
+    @Override
+    public String toString() {
+        return String.valueOf(id);
+    }
 }

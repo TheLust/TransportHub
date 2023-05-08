@@ -91,23 +91,37 @@ header nav {
 	width: auto;
 }
 
-header nav a {
-	width: 100px;
-	height: 100%;
-	float: left;
-	margin-right: 10px;
+header nav div a div{
+    width: 60px;
+    height: 60px;
+    float: right;
 }
 
-header nav a p {
-	float: left;
-	font-size: 16px;
-	transform: translate(-50%, -50%);
-	margin-left: 50%;
-	margin-top: 30px;
+header nav div a div img {
+    height: 30px;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    margin-left: 50%;
 }
 
-.active-page {
-	background-color: #424242;
+header nav div div a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown-menu a {
+    color: #111111 !important;
+}
+
+.dropdown-menu a:hover {
+     background: #014464 !important;
+     background: linear-gradient(left, #fdc2d8, #fca65e, #ff7983 , #041282);
+     background: -moz-linear-gradient(left, #fdc2d8, #fca65e, #ff7983 , #041282)!important;
+     background: -webkit-gradient(linear, 100% 100%, 0% 0%, from(#fdc2d8), to(#041282))!important;
+     color: #f8f9fa !important;
+     -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+     transition: all 0.2s ease-in-out;
 }
 
 .bg-img {
