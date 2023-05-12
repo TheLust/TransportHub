@@ -1,12 +1,12 @@
 package com.practica.TransportHub.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Table
 @Entity
@@ -29,6 +29,7 @@ public class ReservationEntity {
     private LocalDate date;
 
     @NotNull(message = "Seat is mandatory")
+    @Min(value = 1, message = "The min seat number is")
     private int seat;
 
     @Override
